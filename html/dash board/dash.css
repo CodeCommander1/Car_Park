@@ -1,0 +1,813 @@
+
+body{
+    background:linear-gradient(to right, #f6f6f4, rgb(133, 214, 244));
+  }
+  
+  body{
+  margin: 0px;
+  }
+  
+  .react-icons{
+    text-align: center;
+    vertical-align:baseline;
+    margin-right: 10px;
+  }
+  
+  
+  /* App.js css */
+  
+  .App{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    height: 100vh;
+    margin: 0px;
+  }
+  
+  .navbar-section{
+    border: 0px solid black;
+    background:linear-gradient(to right,#09b6d8,#77dbf4);
+  }
+  
+  .body-section{
+    padding: 1rem;
+  }
+  
+  @media (max-width: 750px){
+    .App{
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0px;
+    }
+    .navbar-section{
+      width: 100%;
+      margin: 0px;
+    }
+  }
+  
+  /* Navbar.js */
+  .navbar{
+    padding: 1rem;
+    color:  rgb(245, 242, 242);
+  }
+  
+  .navbar-header{
+  
+    font-family: cursive;
+    font-size: 30px;
+    margin-bottom: 5rem;
+  }
+  
+  .navbar-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navbar-link-dashboard{
+    font-size: 20px;
+    color:rgb(249, 248, 248) ;
+    text-decoration: none;
+    
+  }
+  
+  .navbar-link-dashboard:hover{
+    color:rgba(238, 237, 237, 0.81) ;
+  }
+  
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .navbar-logout-button{
+    background-color: #78cee3be;
+    border-radius: 10px;
+    border: 1px ;
+    color: white;
+    width:7rem;
+  }
+  .navbar-logout-button:hover{
+    background-color:#4ec4e2be ;
+  }
+  
+  @media (max-width: 1200px){
+    .navbar-header{
+  
+      font-family: cursive;
+      font-size: 30px;
+      margin-bottom: 0px;
+    }
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #0077b6;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+  }
+  
+  /* Signup.js */
+  
+  
+  
+  /* student Dasboard .js */
+  
+  
+  .student-dashboard-header{
+    font-family: cursive;
+    font-size: 40px;
+    margin-bottom:20px;
+  }
+  
+  .student-dashboard-class{
+    color: rgb(65, 161, 246);
+    margin-bottom:20px;
+    text-align: center;
+  }
+  
+  .student-dashboard-classCode-form{
+    text-align: center;
+    padding: 40px;
+  }
+  .classCode-form-header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+  }
+  
+  .LearningPathsSection-student{
+    border: 1px ;
+    border-radius: 20px;
+    background-color: rgba(138, 139, 139, 0.188) ;
+    padding: 1rem;
+  }
+  
+  .classCode-form-input{
+    border: none;
+    border-radius: 4px ;
+    height: 30px;
+    margin-right: 20px;
+    background-color: #f3f4f4;
+  }
+  
+  .classCode-form-input::placeholder{
+    text-align: center;
+  }
+  
+  .classCode-form-submit{
+    border: none;
+    background-color: #07b1db;
+    height: 30px;
+    border-radius: 4px;
+    color: rgb(45, 44, 44);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.178);
+  }
+  
+  .classCode-form-submit:hover{
+    background-color: #69c381;
+  }
+  
+  .learning-path-create-button{
+    margin-top: 2vh;
+    border-radius: 7px;
+    border: 0px;
+    color: rgb(238, 237, 237);
+    background-color: rgb(76, 169, 203) ;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .learning-path-create-button:hover{
+    background-color: rgb(96, 160, 183) ;
+    cursor:pointer;
+  }
+  
+  .LearningPathsSection-student-header{
+       font-family: cursive;
+       font-size: 28px;
+  }
+  
+  /* LearningPathViewer.js */
+  
+  .learning-path-viewer{
+    display: flex;
+    gap: 3rem;
+    overflow: scroll;
+  }
+  .learning-path-viewer-path{
+    text-align: center;
+    font-family:fantasy;
+    margin-top: 1rem;
+  }
+  .learning-path-viewer-subject{
+    text-align: center;
+    font-family:fantasy;
+  }
+  
+  .learning-path-viewer-component-container{
+    border: 4px solid rgb(119, 187, 219);
+    max-height: 80vh;
+    padding: 20px;
+    width: 20rem;
+    border-radius: 20px;
+  }
+  
+  
+  @media (max-width: 1200px){
+  
+    .LearningPathsSection-teacher{
+      width: 100%;
+    }
+  
+    .learning-path-viewer{
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      
+      
+    }
+  
+    .learning-path-viewer-component-container{
+      width:100%;
+    }
+  
+  }
+  
+  .scrollable-topics {
+    max-height: 500px; /* Set a height limit for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 5px; /* Optional: Rounded corners */
+  }
+  
+  .completed {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green; /* Green for completed */
+    margin-left: 5px;
+  }
+  
+  .not-completed {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red; /* Red for not completed */
+    margin-left: 5px;
+  }
+  
+  
+  /* Teacher Dashboard.js */
+  
+  .teacher-dashboard-header{
+    font-family: cursive;
+    font-size: 40px;
+    margin-bottom:20px;
+  }
+  
+  .teacher-subject-section{
+    
+    background-color: rgba(25, 25, 24, 0.075);
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .teacher-subject-header{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(98, 97, 97);
+  }
+  
+  .teacher-subject-container{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    list-style: none;
+  }
+  
+  .teacher-subject-item{
+   
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .teacher-subject-item-link{
+    margin-right: 30px;
+    margin-top: 20px;
+    box-shadow: 3px 14px 30px rgba(0, 0, 0, 0.163);
+    background:linear-gradient(to right,#54d8f2, rgb(114, 218, 232),#07b1db);
+  
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+  }
+  
+  .teacher-subject-item-link:hover{
+    background:linear-gradient(to right,#09b0da1d, rgba(114, 218, 232, 0.745),#3ac6e2c2);
+  }
+  
+  .learning-path-create-button{
+    margin-left: 30px;
+  }
+  
+  .teacher-subject-progressbar{
+    vertical-align:baseline;
+    margin-right: 10px;
+  }
+  
+  
+  .teacher-analysis-section{
+    background-color: rgba(11, 11, 11, 0.084);
+    
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    padding-bottom: 50px;
+  }
+  
+  .teacher-subject-analysis-item-link{
+    margin-right: 30px;
+    margin-top: 20px;
+    box-shadow: 3px 14px 30px rgba(0, 0, 0, 0.163);
+    background:linear-gradient(to right,#54d8f2, rgb(114, 218, 232),#07b1db);  color:white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+  }
+  
+  .teacher-subject-analysis-item-link:hover{
+    background:linear-gradient(to right,#09b0da1d, rgba(114, 218, 232, 0.745),#3ac6e2c2);
+  }
+  
+  @media (max-width: 1200px){
+    .teacher-dashboard-header{
+      text-align: center;
+    }
+    .teacher-subject-container{
+      display:flex;
+      flex-direction: column;
+      list-style: none;
+    }
+  }
+  
+  /* SubjectWiseLearningPath.js */
+  
+  .teacher-dashboard-subjectwise-header{
+    text-align: center;
+    font-family: cursive;
+  }
+  
+  .teacher-dashboard-subject-header{
+    color: rgb(66, 148, 219);
+  }
+  
+  /* AddNewLearningPath.js */
+  
+  .add-new-learning-path-section{
+  
+    /* background-color:rgb(240, 237, 237)  ; */
+    display: flex;
+   
+    gap: 5rem;
+  }
+  
+  .alternate-message-learning-path{
+    text-align: center;
+    margin-top: 10rem;
+  }
+  
+  .generated-learning-path-section{
+    width:550px;
+    background-color:  rgb(240, 237, 237);
+    border-radius: 20px;
+    overflow: scroll;
+    max-height: 900px;
+    margin-top: 5rem;
+  }
+  
+  .add-new-learning-path-form{
+    margin-left: 5rem;
+    margin-top: 5rem;
+  }
+  
+  @media (max-width: 668px){
+    
+  
+    .add-new-learning-path-section{
+  
+      
+      display: flex;
+      flex-direction: column;
+     
+      gap: 5rem;
+    }
+  
+    .generated-learning-path-section{
+      width:100%;
+      background-color:  rgb(240, 237, 237);
+      border-radius: 20px;
+      overflow: scroll;
+      max-height: 900px;
+      margin-top: 1rem;
+      
+    }
+    .add-new-learning-path-form{
+      width:100%;
+      margin: 0px;
+    }
+  }
+  
+  /* LearningPathComponent.js */
+  
+  .learning-path{
+    text-align: center;
+  }
+  
+  .generated-learning-path-section-header{
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+  
+  }
+  
+  .learning-path-grid-component{
+    background-color: rgb(166, 232, 243);
+    border-radius: 40px;
+    border: 4px solid rgb(60, 178, 218);
+    box-shadow: 5px 8px 10px 0.1px rgba(0, 0, 0, 0.213);
+  }
+  .learning-path-grid-component-day{
+     text-align: center;
+  }
+  .learning-path-grid-component-body{
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  /* SubjectWiseAnalytics.js*/
+  
+  .subject-wise-analytics-page-student-list-container{
+    padding: 1rem;
+    background-color: rgb(239, 238, 237);
+    border-radius: 20px;
+    border: 3px solid rgb(71, 185, 237);
+  }
+  
+  .subject-wise-analytics-page-section1{
+     display: flex;
+     gap:200px;
+  }
+  
+  @media (max-width: 1600px){
+    .subject-wise-analytics-page-section1{
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+   }
+  }
+  
+  .subject-wise-analytics-page-section1-class-details{
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .subject-wise-class-name{
+    color: rgb(75, 167, 216);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .subject-wise-subject-name{
+    color: rgb(122, 125, 125);
+  }
+  
+  .subject-wise-class-strength{
+    color: rgb(122, 125, 125);
+  }
+  
+  /* AverageAttendanceComponent.js */
+  
+  .Today-attendance-pie-chart-container{
+    padding-left: 30px;
+    overflow:scroll;
+  }
+  
+  @media (max-width: 1200px){
+    .Today-attendance-pie-chart-container{
+      padding: 0px;
+    }
+  }
+  
+  .Today-attendance-pie-chart-label{
+    font-family: cursive;
+    font-size: 30px;
+  }
+  
+  .today-attendance-pie-chart{
+    
+    background-color: rgb(240, 236, 236);
+    border-radius:20px;
+    margin-bottom: 20px;
+  }
+  
+  /* ClassAttendanceRecordBarGraph.js*/
+  .ClassAttendanceRecordBarGraph-label{
+    font-family: cursive;
+    font-size: 20px;
+  }
+  .ClassAttendanceRecordBarGraph{
+    background-color: rgb(240, 236, 236) ;
+    border-radius: 20px;
+    margin-bottom: 7rem;
+    overflow: scroll;
+    max-width:800px;
+  }
+  
+  @media (max-width: 1200px){
+    .ClassAttendanceRecordBarGraph-container{
+      overflow: scroll;
+    }
+  }
+  
+  /* TeacherProfileComponent.js */
+  
+  .teacher-info{
+    display: flex;
+    
+  }
+  
+  
+  
+  .teacher-imageAndName{
+    
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #teacher-image{
+    height: 16rem;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    
+  }
+  #teacher-name{
+    font-family:cursive;
+    color: rgb(84, 85, 85);
+  }
+  
+  .calendar-section{
+    
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: cursive;
+    margin-top: 20px;
+  }
+  
+  
+  
+  @media (max-width: 1200px){
+    .teacher-info{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .calendar-section{
+      padding: 10px;
+      
+    }
+  }
+  
+  
+  /* AnalyticsPage.js */
+  
+  .analytics-page {
+    padding: 20px;
+    margin: auto;
+    
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .analytics-page-section1{
+      display: flex;
+      gap:30px;
+      width: 100%;
+      overflow: scroll;
+  }
+  
+  .analytics-page h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .analytics-page-chart-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+  }
+  
+  .analytics-page-chart-container h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .analytics-page-section2 {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #b6b5b5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  
+  }
+  
+  @media (max-width: 1200px){
+    .analytics-page-section2{
+  
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .missed-topics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .missed-topics-item {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #48d6f9ad;
+  }
+  
+  .missed-topics-item h3 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .missed-topics-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .missed-topics-item ul li {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .analytics-page-section2-subsection1{
+    padding: 20px;
+    width: 100%;
+    height: 400px ;
+    overflow: scroll;
+  }
+  
+  @media (max-width: 1200px){
+    .analytics-page-section2-subsection1{
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    
+  }
+  
+  .analytics-page-section2-subsection2{
+    margin-top: 20px;
+     padding: 20px;
+     border-radius: 8px;
+     background-color: #f9f9f92f;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     max-width: 600px;
+     margin: 0 auto;
+  }
+  
+  
+  .analytics-page-section2-subsection2 h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Calendar styling */
+  .react-calendar {
+    width: 100%;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+  }
+  
+  .react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 10px 0;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .react-calendar__navigation button {
+    color: rgb(112, 111, 111);
+    background-color: #07b1db03;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 1.1rem;
+  }
+  
+  .react-calendar__tile {
+    padding: 10px;
+    border: 1px solid grey;
+    background-color: #caedf691;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .react-calendar__tile--now {
+    background-color: #81e48a;
+    font-weight: bold;
+  }
+  
+  .react-calendar__tile--now:hover {
+    background-color: #7ec180;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #99e99d61;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .react-calendar__tile--active:hover {
+    background-color: #4caf50;
+  }
+  
+  .react-calendar__month-view__days__day--weekend {
+    color: #ff5722;
+  }
+  
+  .absent-day {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-radius: 50%;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .absent-day:hover {
+    background-color: #d32f2f !important;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  .absent-day::after {
+    content: 'Absent';
+    font-size: 0.8em;
+    color: white;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .absent-day:hover::after {
+    opacity: 1;
+  }
+  

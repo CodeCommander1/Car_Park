@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            padding: 0;    this is called universal selector were margin and padding both are zero this is consider as to be best practice
+            margin: 0;
+        } */
+        p{
+            font-style: italic;                          /* style of your font */
+            font-size: 20px;                            /*size of your font  */
+            font-family: 'Times New Roman', Times, serif; /* it provides multiple options of font */
+            font-weight: 900;                          /* it shows boldness of font */
+           line-height: 30px;                          /* it is for distance between two line */
+        }
+
+        #firstpara{
+            background-color: bisque;
+            color: blue;
+            padding: 50px;                             /*  or we can write padding: 12px 20px 30px 40px for left/right/top/bottom padding */
+            margin: 50px;                               /* same backchodi as padding */
+ 
+
+        }
+
+        #secondpara{
+            color: rgb(0,0,0);                       /* red,green,blue */
+        }
+
+        #thirdpara{
+            background-color: rgb(71, 95, 111,0.5);              /* red,green,blue,transparency */
+        }
+
+        .para{
+            background-color: #23222401;         /*this is hexadecimal form for representing colour where first two digit is for red next two digit for green and next two digit is for blue and last two digit is for transparency */
+
+        }
+        #ia{
+            background-color: aqua;
+            border: solid brown 5px;             /* we can write characteristic individually*/
+        }
+        #ib{
+            background-color: brown;
+            border: solid green 5px;
+            border-radius: 50px;
+        }
+
+        h2{
+            color: cadetblue;
+            background-color: black;
+            width: 400px;
+        }
+        .inline{
+            padding: 100px;
+            display: inline-block;          /* it is use to change block to inline similarly we can change inline to block */
+        }
+        img{
+            margin: 10px;
+        }
+        div{
+            border: 5px solid black;
+        }
+        .img2
+        {
+            position: relative;                /* relative positining is according to current screen */
+            top: 100px;
+            left: 200px;
+        }
+        .img3
+        {
+            position: absolute;                /* absolute consumes memory of its nearest tag */
+        }
+        .img1{                                 /* fixed mean img will always remain in same plain*/
+            position: fixed;
+        }
+       
+        .img5
+        {
+            position: sticky;                   /* sticky mean img can move */
+        }
+
+    </style>
+
+    <style>
+        #nik
+        {
+            float: right;
+            clear: left;
+        }
+        #nik
+        {
+            float: right;
+            
+        }
+    </style>
+
+    <style>
+        .overf{
+            border: 2px solid black;              
+            width: 500px;
+            height: 500px;
+            overflow: scroll;                     
+        }
+    </style>
+
+    <style>
+        .box{
+            height: 500px;
+            width: 500px;
+            background-color: blue;
+            border: 2px black solid;
+        }
+           /* use @media for different screen size */
+
+        @media (min-width:300px) {                               
+            .box{
+                background-color: darkred;                
+            }
+        }
+    </style>
+
+    <style>
+        .container{
+            height: 500px;
+            width: 500px;
+            border: 1px black solid;
+            background-color: azure;
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            padding: 2px;
+            margin: 10px;
+        }
+        #leftbox{
+            background-color: aqua;
+            border: 1px solid black;
+            width: 47%;
+            margin: 2px;
+            padding: 3px;
+            display: flex;
+            flex-direction: column;
+
+        }
+        #rightbox{
+            background-color: beige;
+            border: 1px solid black;
+            width: 47%;
+            margin: 2px;
+            padding: 3px;
+
+        }
+            @media (max-width:640px) {
+                .container{
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+            }
+
+    </style>
+
+   
+
+
+</head>
+<body>
+     <h2>Welcome to codehelp</h2>     
+    <p id="firstpara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat atque mollitia in id maiores voluptate assumenda, soluta odio maxime, numquam officiis rem suscipit ullam. Asperiores, impedit totam ad vel recusandae a doloribus repudiandae officiis voluptatem facilis ab molestias quos rem illo delectus, perspiciatis sapiente rerum praesentium, neque blanditiis quibusdam hic.</p>
+    <p  id="secondpara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore libero quia est eos ex eius sed aliquid rem voluptas nulla.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, vel. Doloremque dolore nemo magnam eum eos totam modi, fuga non perferendis nostrum ex corporis est labore cupiditate tempore provident, laborum, expedita beatae voluptatum ratione libero!</p>
+    <p id="thirdpara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, sint numquam? Quos numquam nobis laborum, ut tempore distinctio eius illo amet beatae ipsum nemo ipsa temporibus veritatis delectus. Est, doloremque.</p>
+  
+    <div>
+        <p id="ia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates molestiae labore blanditiis omnis quibusdam!</p>
+        
+        <p id="ib">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque velit, et quae perspiciatis eveniet fugiat nulla minus error architecto.</p>
+    </div>
+   <span class="inline">this is nishant singh</span>
+   <br>
+
+
+    <!-- Block element 
+     1.New line
+     2.occupy whole width
+     3.we can change width and height
+     4.we can change margin and padding
+     example-div,para,heading etc -->
+
+     <!-- inline element
+      1.same line
+      2.occupy content fit
+      3.we cannot change width and height
+      4.we canoot change margin and padding
+      example-span,anchor,etc -->
+
+     <div>
+        <img class="img1" width="250px" height="250px" src="DSC_0247.jpg" alt="nishant singh">
+        <img class="img2" width="250px" height="250px" src="sup.jpg.jpg" alt="image 2">
+        <img class="img3" width="250px" height="250px" src="sup2.jpg.jpg" alt="image 3">
+        <img class="img4" width="250px" height="250px" src="sup3.jpg.jpg" alt="image 4">
+        <img class="img5" width="250px" height="250px" src="sup.5,jpg.jpg" alt="image 5">
+
+     </div>
+<br>
+
+     <div class="float">
+        <img src="DSC_0247.jpg" alt="Nishant" width="250" height="250" id="nik">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non repellat voluptates, praesentium amet libero qui dignissimos iste fugit totam velit excepturi natus perferendis necessitatibus similique deserunt, neque ipsa porro nulla ea mollitia. Ipsam ipsa atque dolorum omnis, sit, soluta excepturi ea quidem et, quisquam ducimus voluptatum assumenda accusamus culpa earum modi aliquid quo nulla libero ipsum eum quaerat! Perferendis nisi ut nulla omnis harum itaque, illum, dolorum officiis doloremque quo rerum, dignissimos eligendi? Facere laboriosam reiciendis esse, animi ex commodi libero dignissimos dolores tenetur suscipit quasi, delectus rerum quas officia dolore placeat quibusdam possimus aperiam earum, nemo culpa minus quam hic doloribus. Consequuntur itaque maiores, hic quam assumenda nesciunt veritatis animi minus suscipit aspernatur ipsam asperiores eos culpa optio, omnis modi eveniet excepturi temporibus est! Voluptatem officiis aliquid nihil quis, laboriosam in officia rerum sint cum repellendus delectus obcaecati voluptatum explicabo facere sapiente saepe adipisci iste, nulla ab maiores excepturi perferendis modi vitae doloremque. Architecto soluta, nobis impedit quisquam asperiores id et sed quibusdam voluptatum facilis, nemo quae porro voluptas reprehenderit natus molestiae reiciendis incidunt cupiditate quasi voluptate dicta voluptatibus nam recusandae repellendus. Ab, quae reprehenderit. Quidem accusamus pariatur perferendis ab voluptates. Expedita minus, necessitatibus commodi repellendus nobis repellat consequuntur quae eos voluptatem dolorum dolor optio excepturi pariatur mollitia velit odio doloribus reprehenderit ex voluptatibus iusto eligendi consectetur magnam. Ullam quis tenetur beatae iure placeat a, modi, vero fugit hic facilis fugiat dolore voluptate repellendus nihil. Perspiciatis, aut et earum quod nemo molestiae autem non maxime pariatur, ipsam distinctio.</p>
+        <img src="DSC_0247.jpg" alt="Nishant" width="250" height="250" id="nik">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, animi tempore! Maiores sit reprehenderit tenetur porro odio, nesciunt quidem laboriosam nihil rem quod autem animi fuga accusantium ullam debitis? Pariatur fuga, culpa natus, vero, velit consequuntur praesentium perferendis reiciendis esse incidunt ad voluptates eum explicabo in sapiente? Odit et porro harum saepe nam eum consectetur veniam quis, vero delectus id at. Unde placeat ipsam quis magni tempora iste! Quia laudantium voluptate impedit mollitia veritatis, voluptates necessitatibus obcaecati iusto sapiente quasi consequatur tempora aliquam nihil? Facere fugit possimus in incidunt, earum autem suscipit eius. Minima velit soluta optio, voluptatibus accusantium nisi mollitia, temporibus suscipit deserunt veritatis molestiae corporis totam consequatur! Aliquam, maiores quae. In porro cum, ullam iure beatae suscipit placeat? Assumenda, cupiditate ipsam nesciunt laudantium provident qui, ex id cumque eum commodi nam quisquam sequi aut. Deserunt porro iusto voluptates voluptatum numquam? Molestias architecto laborum numquam dolores, dicta, sunt cum deleniti fuga dolorum pariatur possimus totam laboriosam exercitationem eum quam perferendis qui voluptatibus obcaecati! Ullam reiciendis minima voluptates cupiditate autem illum magni ad maxime nesciunt itaque, aperiam consequatur consectetur expedita eligendi culpa odio dolorem deserunt, incidunt recusandae necessitatibus repudiandae perspiciatis officia quam! Sunt odio impedit ex, deleniti repudiandae nisi dicta atque, quos veritatis accusamus esse quas sequi animi rerum. Nobis natus, doloremque laborum necessitatibus fugit ullam debitis officiis assumenda quos unde modi dolor eligendi, repellat voluptates excepturi facilis quisquam voluptatem molestias accusantium nisi eos laudantium aut. Veritatis doloremque neque dolore distinctio laborum facilis libero excepturi earum necessitatibus! Odit, soluta incidunt.</p>
+     </div>
+<br>
+     <div class="overf">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta autem repellendus earum modi reiciendis quibusdam excepturi corporis adipisci, iusto eum tempora assumenda exercitationem facere! Explicabo esse obcaecati blanditiis porro quasi magni provident placeat nemo error totam perspiciatis saepe, eveniet reprehenderit eius officia! Commodi repellendus impedit quos minima. Repellat quis ullam neque ratione ad, nobis in iste quisquam voluptatem eius doloremque distinctio, odio consequatur odit error ipsum impedit architecto voluptate atque inventore! Similique itaque odit quod sed praesentium eveniet a, quis dolorem fugit eius voluptatem ab dolore facere, quibusdam, sapiente rem laudantium obcaecati alias. Dicta, recusandae laudantium ab impedit ratione magnam hic deleniti minima, delectus ducimus quod doloribus sit nihil numquam vero laborum nam, est repellendus dolor quidem quisquam perferendis reprehenderit. Sit consequatur, dolores accusamus ab labore alias fugiat, ratione qui sed accusantium temporibus quae cum voluptate, numquam necessitatibus est? Reiciendis beatae quibusdam et sed eius illo commodi fugit eaque! Dolorum numquam illum minus veritatis nulla. Distinctio ex qui voluptas quis eveniet dolor nostrum nulla inventore voluptates? Quibusdam veritatis praesentium pariatur, placeat ut aperiam dolor unde saepe molestias fuga repellat suscipit quaerat obcaecati facilis eos optio voluptatum modi cupiditate aliquam! Aliquid inventore velit asperiores alias earum officiis provident placeat, impedit non.
+        </p>
+     </div>
+
+     <div class="box">
+        KYA BOLTI PUBLIC
+
+     </div>
+     <br>
+
+     <div class="container">
+        <div id="leftbox">
+            <p>Text1</p>
+            <p>Text2</p>
+        </div>
+        <div id="rightbox">
+            <img id="nish" src="DSC_0247.jpg " alt="Nishant singh">
+        </div>
+     </div>
+     
+
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Deeksha Group of Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="image.png" alt="Deeksha Group of Education" class="h-12 w-auto mr-3">
+                    
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-red-600 font-medium">About Us</a>
+                    <a href="courses.html" class="text-gray-700 hover:text-red-600 font-medium">Courses</a>
+                    <a href="admissions.html" class="text-gray-700 hover:text-red-600 font-medium">Admissions</a>
+                    <a href="contact.html" class="text-red-600 font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-red-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-red-600">About Us</a>
+                <a href="courses.html" class="block py-2 text-gray-700 hover:text-red-600">Courses</a>
+                <a href="admissions.html" class="block py-2 text-gray-700 hover:text-red-600">Admissions</a>
+                <a href="contact.html" class="block py-2 text-red-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="hero-section pt-20">
+        <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Contact Us</h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Get in touch with us for admissions, course information, or any other queries
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Details -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        We're here to help you achieve your dreams. Contact us for course details, 
+                        admission information, or any guidance you need for your preparation.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="contact-item">
+                            <div class="text-3xl mr-4">📍</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-lg mb-1">Visit Us</h4>
+                                <p class="text-gray-600">Sector 4/A, Near BGH and Laxmi Market</p>
+                                <p class="text-gray-600">Bokaro Steel City, Jharkhand - 827004</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="text-3xl mr-4">📞</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-lg mb-1">Call Us</h4>
+                                <p class="text-gray-600 text-lg font-medium">7004018131</p>
+                                <p class="text-gray-600 text-lg font-medium">9835349687</p>
+                                <p class="text-sm text-blue-600 mt-1">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="text-3xl mr-4">💬</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-lg mb-1">WhatsApp</h4>
+                                <p class="text-gray-600 text-lg font-medium">9835349687</p>
+                                <a href="https://wa.me/919835349687" class="inline-block mt-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                                    Send WhatsApp Message
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Office Hours</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="font-medium text-gray-800">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="font-medium text-gray-800">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="font-medium text-gray-800">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                            <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Course Interest</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                <option value="">Select a course</option>
+                                <option value="bank">Bank Exam Preparation</option>
+                                <option value="ssc">SSC Coaching</option>
+                                <option value="railway">Railway Exam Coaching</option>
+                                <option value="math">Mathematics (Class 8-10)</option>
+                                <option value="science">Science (Class 8-10)</option>
+                                <option value="both">Both Math & Science</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Educational Qualification</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                <option value="">Select qualification</option>
+                                <option value="8th">8th Class</option>
+                                <option value="10th">10th Pass</option>
+                                <option value="12th">12th Pass</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="postgraduate">Post Graduate</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Tell us about your queries, preferred batch timings, or any specific requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Find Us</h2>
+            
+            <!-- Map Placeholder -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+                <div class="h-96 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🗺️</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Interactive Map</h3>
+                        <p class="text-gray-600 mb-4">Sector 4/A, Near BGH and Laxmi Market<br>Bokaro Steel City, Jharkhand</p>
+                        <a href="https://maps.google.com/?q=Sector+4A+Qr+Number+2105+Bokaro+Steel+City+Jharkhand" target="_blank" class="btn-secondary">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Info -->
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="landmark-item">
+                    <div class="text-3xl mb-2">🏥</div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Near BGH Hospital</h4>
+                    <p class="text-gray-600 text-sm">Just 2 minutes walk from Bokaro General Hospital</p>
+                </div>
+                <div class="landmark-item">
+                    <div class="text-3xl mb-2">🏪</div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Laxmi Market</h4>
+                    <p class="text-gray-600 text-sm">Located adjacent to the famous Laxmi Market</p>
+                </div>
+                <div class="landmark-item">
+                    <div class="text-3xl mb-2">🚌</div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Public Transport</h4>
+                    <p class="text-gray-600 text-sm">Well connected by bus routes and auto-rickshaws</p>
+                </div>
+                <div class="landmark-item">
+                    <div class="text-3xl mb-2">🅿️</div>
+                    <h4 class="font-semibold text-gray-800 mb-1">Parking Available</h4>
+                    <p class="text-gray-600 text-sm">Convenient parking space for vehicles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Frequently Asked Questions</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">What are the admission requirements?</h4>
+                    <p class="text-gray-600">For competitive coaching, graduation is preferred but not mandatory. For academic coaching (8-10), students should be currently enrolled in respective classes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Do you provide study materials?</h4>
+                    <p class="text-gray-600">Yes, we provide comprehensive study materials, practice tests, and previous year question papers for all our courses.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">What is the batch size?</h4>
+                    <p class="text-gray-600">We maintain small batch sizes of 20-30 students to ensure personalized attention and effective learning.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Are there any payment installments?</h4>
+                    <p class="text-gray-600">For competitive coaching, the fee is ₹7,500 one-time. For academic coaching, it's ₹600 per month per subject.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Do you provide job placement assistance?</h4>
+                    <p class="text-gray-600">We provide comprehensive guidance on exam patterns, application processes, and interview preparation to help you succeed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Can I visit the institute before admission?</h4>
+                    <p class="text-gray-600">Absolutely! We encourage prospective students to visit our campus, meet faculty, and see our facilities before making a decision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact CTA -->
+    <section class="cta-section py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Need Immediate Assistance?</h2>
+            <p class="text-xl text-white opacity-90 mb-8">Our counselors are available to help you choose the right course and answer all your questions.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:7004018131" class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    📞 Call Now
+                </a>
+                <a href="https://wa.me/919835349687" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">
+                    💬 WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="image.png" alt="Deeksha Group of Education" class="h-10 w-auto mr-3">
+                    </div>
+                    <p class="text-gray-300">Empowering aspirants since 2011 with quality education and experienced faculty.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-300 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-300 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Courses</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-300">Bank Exams</span></li>
+                        <li><span class="text-gray-300">SSC Exams</span></li>
+                        <li><span class="text-gray-300">Railway Exams</span></li>
+                        <li><span class="text-gray-300">Academic (8-10)</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📍 Sector 4/A, Near BGH and Laxmi Market</p>
+                        <p>Bokaro Steel City, Jharkhand</p>
+                        <p>📞 7004018131</p>
+                        <p>📱 9835349687 (WhatsApp)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© Deeksha Group of Education | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919835349687" target="_blank" class="whatsapp-float">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

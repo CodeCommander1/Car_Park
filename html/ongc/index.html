@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONGC Internal Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #3877dc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: row;
+      border: 1px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      max-width: 1000px;
+      width: 90%;
+    }
+
+    .formData {
+      flex: 1;
+      padding: 30px;
+      background-color: white;
+    }
+
+    .formData img.logo {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    .formData h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .captcha-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    #captchaDisplay {
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #f0f0f0;
+      padding: 5px 10px;
+      border-radius: 4px;
+      user-select: none;
+    }
+
+    button[type="submit"],
+    button[type="button"] {
+      background-color: #0078d7;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .sideImage {
+      flex: 1;
+    }
+
+    .sideImage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .footer b {
+      display: block;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="formData">
+      <img src="s1.png" alt="ONGC Reports Logo" class="logo" />
+      <h2>Internal Portal for ONGCians</h2>
+
+      <form onsubmit="return handleLogin(event)">
+        <label for="empid">CPF No.</label>
+        <input type="text" id="empid" placeholder="CPF NO" name="empid"/>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" name="password"/>
+
+        <label for="captchaInput">Captcha</label>
+        <div class="captcha-group">
+          <input type="text" id="captchaInput" placeholder="Enter captcha"/>
+          <span id="captchaDisplay">ABC123</span>
+          <button type="button" onclick="generateCaptcha()">🔄</button>
+        </div>
+
+        <button type="submit">Sign In</button>
+      </form>
+
+      <div class="footer">
+        Helpdesk: 011-2675-4147<br />
+        For website related issues mail to:
+        <a href="mailto:ongcreports@ongc.co.in">ongcreports@ongc.co.in</a><br />
+        In case of emergency related to COVID-19:
+        <b>012-35727161</b><br />
+        <br />
+      </div>
+    </div>
+
+    <div class="sideImage">
+      <img src="https://th.bing.com/th/id/OIP.Y8vMEmkJKn_4I3GNZzm5tQHaDs?rs=1&pid=ImgDetMain" alt="ONGC Platform"/>
+    </div>
+  </div>
+  
+  <script>
+    let generatedCaptcha = '';
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let captcha = '';
+      for (let i = 0; i < 6; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      generatedCaptcha = captcha;
+      document.getElementById('captchaDisplay').textContent = captcha;
+    }
+
+    window.onload = generateCaptcha;
+
+    function handleLogin(event) {
+      event.preventDefault();
+
+      const empid = document.getElementById('empid').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const captchaInput = document.getElementById('captchaInput').value.trim();
+
+      if (empid === '' || password === '' || captchaInput === '') {
+        alert('Please fill in all fields.');
+        return false;
+      }
+
+      if (captchaInput !== generatedCaptcha) {
+        alert('Incorrect captcha. Try again.');
+        generateCaptcha();
+        return false;
+      }
+
+      // Redirect to dashboard
+      window.location.href = 'dashboard.html';
+      return false;
+    }
+  </script>
+</body>
+</html>

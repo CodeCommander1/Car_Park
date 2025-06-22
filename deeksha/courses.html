@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Deeksha Group of Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="image.png" alt="Deeksha Group of Education" class="h-12 w-auto mr-3">
+                    
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-red-600 font-medium">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-red-600 font-medium">About Us</a>
+                    <a href="courses.html" class="text-red-600 font-medium">Courses</a>
+                    <a href="admissions.html" class="text-gray-700 hover:text-red-600 font-medium">Admissions</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-red-600 font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-red-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-red-600">About Us</a>
+                <a href="courses.html" class="block py-2 text-red-600">Courses</a>
+                <a href="admissions.html" class="block py-2 text-gray-700 hover:text-red-600">Admissions</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-red-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Courses Hero -->
+    <section class="hero-section pt-20">
+        <div class="max-w-7xl mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Our Courses</h1>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                Comprehensive coaching programs designed to help you succeed in competitive examinations and academic subjects
+            </p>
+        </div>
+    </section>
+
+    <!-- Competitive Coaching Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-600 mb-4">Competitive Coaching</h2>
+                <p class="text-lg text-gray-600">Specialized preparation for government competitive examinations</p>
+                <div class="mt-4 p-4 bg-red-50 rounded-lg inline-block">
+                    <p class="text-2xl font-bold text-red-600">Fee: ₹600/Month</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bank Exam Preparation -->
+                <div class="course-detail-card">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🏦</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Bank Exam Preparation</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Exams Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Bank Clerk Examinations</li>
+                                <li>• Bank PO (Probationary Officer)</li>
+                                <li>• SBI, IBPS, RBI Exams</li>
+                                <li>• Other Nationalized Bank Exams</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Subjects Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Quantitative Aptitude</li>
+                                <li>• Reasoning Ability</li>
+                                <li>• Banking Awareness</li>
+                                <li>• Current Affairs</li>
+                                <li>• Computer Knowledge</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Features:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Mock tests and practice sessions</li>
+                                <li>• Interview preparation</li>
+                                <li>• Group discussions</li>
+                                <li>• Doubt clearing sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSC Coaching -->
+                <div class="course-detail-card">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">📊</div>
+                        <h3 class="text-2xl font-bold text-gray-800">SSC Coaching</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Exams Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• SSC CGL (Combined Graduate Level)</li>
+                                <li>• SSC CHSL (Combined Higher Secondary)</li>
+                                <li>• SSC MTS (Multi Tasking Staff)</li>
+                                <li>• Other SSC Examinations</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Subjects Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Mathematics</li>
+                                <li>• Reasoning</li>
+                                <li>• General Knowledge</li>
+                                <li>• Current Affairs</li>
+                                <li>• General Awareness</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Features:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Regular mock tests</li>
+                                <li>• Previous year analysis</li>
+                                <li>• Speed and accuracy training</li>
+                                <li>• Subject-wise expert faculty</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Railway Exam Coaching -->
+                <div class="course-detail-card">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🚂</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Railway Exam Coaching</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Exams Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Railway NTPC</li>
+                                <li>• Railway Group D</li>
+                                <li>• Assistant Loco Pilot (ALP)</li>
+                                <li>• Other Railway Recruitment Exams</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Subjects Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Mathematics</li>
+                                <li>• Reasoning</li>
+                                <li>• General Science</li>
+                                <li>• Technical Subjects</li>
+                                <li>• Current Affairs</li>
+                                <li>• General Knowledge</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Features:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Computer-based test preparation</li>
+                                <li>• Technical and non-technical subjects</li>
+                                <li>• Previous year question analysis</li>
+                                <li>• Speed and accuracy training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Coaching Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4">Academic Coaching</h2>
+                <p class="text-lg text-gray-600">Quality education for school students in Mathematics and Science</p>
+                <div class="mt-4 p-4 bg-blue-50 rounded-lg inline-block">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Mathematics Coaching -->
+                <div class="course-detail-card">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">📐</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Mathematics</h3>
+                        <p class="text-gray-600">Classes 8th to 10th</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Topics Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Algebra and Linear Equations</li>
+                                <li>• Geometry and Mensuration</li>
+                                <li>• Trigonometry</li>
+                                <li>• Statistics and Probability</li>
+                                <li>• Number Systems</li>
+                                <li>• Coordinate Geometry</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Teaching Approach:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Concept-based learning</li>
+                                <li>• Problem-solving techniques</li>
+                                <li>• Regular practice sessions</li>
+                                <li>• Exam preparation strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science Coaching -->
+                <div class="course-detail-card">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🔬</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Science</h3>
+                        <p class="text-gray-600">Classes 8th to 10th</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Subjects Covered:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Physics (Motion, Force, Energy)</li>
+                                <li>• Chemistry (Atoms, Molecules, Reactions)</li>
+                                <li>• Biology (Life Processes, Heredity)</li>
+                                <li>• Environmental Science</li>
+                                <li>• Practical Applications</li>
+                                <li>• Laboratory Concepts</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Teaching Approach:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li>• Conceptual understanding</li>
+                                <li>• Practical examples</li>
+                                <li>• Regular assessments</li>
+                                <li>• Board exam preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Makes Our Courses Special</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">👨‍🏫</div>
+                    <h3 class="text-xl font-semibold mb-4">Experienced Faculty</h3>
+                    <p class="text-gray-600">Over a decade of teaching experience with proven track record in competitive exam coaching.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-xl font-semibold mb-4">Comprehensive Study Material</h3>
+                    <p class="text-gray-600">Well-researched and updated study materials covering complete syllabus for all courses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">📝</div>
+                    <h3 class="text-xl font-semibold mb-4">Regular Assessments</h3>
+                    <p class="text-gray-600">Weekly tests and mock exams to track progress and improve performance continuously.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-4">Personalized Attention</h3>
+                    <p class="text-gray-600">Small batch sizes ensuring individual attention and personalized guidance for every student.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold mb-4">Doubt Clearing Sessions</h3>
+                    <p class="text-gray-600">Dedicated sessions for clearing doubts and providing additional support to students.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="text-4xl mb-4">🏆</div>
+                    <h3 class="text-xl font-semibold mb-4">Success Tracking</h3>
+                    <p class="text-gray-600">Regular monitoring of student progress with feedback and improvement strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Preparation?</h2>
+            <p class="text-xl text-white opacity-90 mb-8">Choose the course that matches your goals and take the first step towards success.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="admissions.html" class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Enroll Now</a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition duration-300">Get Free Counseling</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="image.png" alt="Deeksha Group of Education" class="h-10 w-auto mr-3">
+                        
+                    </div>
+                    <p class="text-gray-300">Empowering aspirants since 2011 with quality education and experienced faculty.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-300 hover:text-white">Courses</a></li>
+                        <li><a href="admissions.html" class="text-gray-300 hover:text-white">Admissions</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Courses</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-300">Bank Exams</span></li>
+                        <li><span class="text-gray-300">SSC Exams</span></li>
+                        <li><span class="text-gray-300">Railway Exams</span></li>
+                        <li><span class="text-gray-300">Academic (8-10)</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-red-400">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📍 Sector 4/A, Near BGH and Laxmi Market</p>
+                        <p>Bokaro Steel City, Jharkhand</p>
+                        <p>📞 7004018131</p>
+                        <p>📱 9835349687 (WhatsApp)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© Deeksha Group of Education | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919835349687" target="_blank" class="whatsapp-float">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

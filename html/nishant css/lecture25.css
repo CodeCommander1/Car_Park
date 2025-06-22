@@ -1,0 +1,33 @@
+.box
+{
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: linear 5s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    /* transform: rotate(45deg);                use negative sign(-) to rotate in opposite direction*/
+    /* transform: skew(30deg); */
+    transform: scale(2x);
+    transform: translate(400px);
+}
+
+p{
+    font-size: 36px;
+}
+
+body{
+    background: linear-gradient(140deg, rgb(30, 144, 255) 8.50%, rgb(90, 88, 239) 32.21%, rgb(115, 65, 232) 55.04%, rgb(138, 43, 226) 80.24%);
+  }

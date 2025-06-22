@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 300px;
+        }
+        form label {
+            margin-right: 10px;
+        }
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        form input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            margin-top: 20px;
+            width: 50%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Disease Prediction System</h1>
+    <form>
+        <label for="symptoms">Enter symptoms (select all that apply):</label><br>
+        <input type="checkbox" id="fever" name="symptoms" value="Fever">
+        <label for="fever">Fever</label><br>
+        <input type="checkbox" id="cough" name="symptoms" value="Cough">
+        <label for="cough">Cough</label><br>
+        <input type="checkbox" id="fatigue" name="symptoms" value="Fatigue">
+        <label for="fatigue">Fatigue</label><br>
+        <input type="checkbox" id="headache" name="symptoms" value="Headache">
+        <label for="headache">Headache</label><br>
+        <input type="checkbox" id="sore-throat" name="symptoms" value="Sore Throat">
+        <label for="sore-throat">Sore Throat</label><br>
+        <input type="checkbox" id="runny-nose" name="symptoms" value="Runny Nose">
+        <label for="runny-nose">Runny Nose</label><br>
+        <input type="checkbox" id="muscle-pain" name="symptoms" value="Muscle Pain">
+        <label for="muscle-pain">Muscle Pain</label><br>
+        <input type="checkbox" id="diarrhea" name="symptoms" value="Diarrhea">
+        <label for="diarrhea">Diarrhea</label><br>
+        <input type="checkbox" id="nausea" name="symptoms" value="Nausea">
+        <label for="nausea">Nausea</label><br>
+        <input type="checkbox" id="vomiting" name="symptoms" value="Vomiting">
+        <label for="vomiting">Vomiting</label><br>
+        <input type="submit" value="Predict">
+    </form>
+    <div id="result"></div>
+    <table>
+        <tr>
+            <th>Predicted Disease</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td id="predicted-disease"></td>
+            <td id="description"></td>
+        </tr>
+    </table>
+    <img src="AI.jpg.png" alt="Disease Prediction System Diagram">
+    <script>
+        const form = document.querySelector('form');
+        const resultDiv = document.querySelector('#result');
+        const predictedDiseaseTd = document.querySelector('#predicted-disease');
+        const descriptionTd = document.querySelector('#description');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const symptoms = [];
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    symptoms.push(checkbox.value);
+                }
+            });
+
+            let prediction;
+            if (symptoms.includes('Fever') && symptoms.includes('Cough')) {
+                prediction = 'Common Cold';
+                descriptionTd.innerText = 'A common cold is a viral infection that affects the upper respiratory system.';
+            } else if (symptoms.includes('Fatigue') && symptoms.includes('Headache')) {
+                prediction = 'Migraine';
+                descriptionTd.innerText = 'A migraine is a type of headache disorder that can cause severe headaches, fatigue, and sensitivity to light and sound.';
+            } else if (symptoms.includes('Sore Throat') && symptoms.includes('Runny Nose')) {
+                prediction = 'Allergies';
+                descriptionTd.innerText = 'Allergies occur when the body\'s immune system overreacts to a harmless substance, such as pollen or dust.';
+            } else {
+                prediction = 'Unknown';
+                descriptionTd.innerText = 'Unable to predict disease based on symptoms.';
+            }
+
+            predictedDiseaseTd.innerText = prediction;
+            resultDiv.innerText = `Predicted disease: ${prediction}`;
+        });
+    </script>
+</body>
+</html>

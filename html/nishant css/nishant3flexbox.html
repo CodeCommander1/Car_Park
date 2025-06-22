@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container{
+        background-color: beige;
+        border: 2px solid black;
+        height: 1000px;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;            /* by default it is row.direction can be column,colum reverse,row,row reverse*/
+        flex-wrap: wrap;               /* use for different screen size */
+        justify-content: center;      /* use to place content in center */
+        align-items: center;
+       align-content: center;
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+        border: 2px solid brown;
+        margin: 2px;
+        padding: 2px;
+    }
+
+    #box1{
+        background-color: aqua;
+    }
+    #box2{
+        background-color: blue;
+        order: -1;                                   /* to change order of box */
+        
+       
+    }
+    #box3{
+        background-color: brown;
+        order: -2;
+         /* flex-grow: 2;                                it mean box4 wil grow 4 times faster than other box */
+         flex-basis: 100px;                               /* it is use to change dimension */
+    }
+    #box4{
+        background-color: orange;
+        flex-shrink: 4;                          /* it mean box4 wil shrink 4 times faster than other box */
+        align-self: center;
+   
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+</body>
+</html>

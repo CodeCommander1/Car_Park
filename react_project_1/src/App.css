@@ -1,0 +1,29 @@
+p{
+  font-size: xx-large;
+}
+
+.table-wrap{
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.about-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 320px;
+}
+
+.about-table th,
+.about-table td{
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.about-table thead th{
+  background: #f4f4f8;
+}
+
+.about-table tbody tr:nth-child(even){
+  background: #fbfbfb;
+}

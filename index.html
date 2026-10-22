@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Parkwise — Parking Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard" aria-label="Parkwise home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 19V5h7.5a4.5 4.5 0 0 1 0 9H9v5M9 10h3.5a.5.5 0 0 0 0-1H9v1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="brand-copy"><strong>parkwise</strong><small>PARKING MANAGEMENT</small></span>
+        </a>
+
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="nav-list">
+          <a class="nav-link active" href="#dashboard" data-page="dashboard" aria-label="Dashboard" title="Dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="nav-link" href="#slots" data-page="slots" aria-label="Parking slots" title="Parking slots">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4zM8 5.5v13m8-13v13M4 10h16m-16 4h16"/></svg>
+            <span>Parking slots</span>
+            <span class="nav-count" id="nav-available-count">4</span>
+          </a>
+          <a class="nav-link" href="#entry" data-page="entry" aria-label="Vehicle entry" title="Vehicle entry">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/><circle cx="12" cy="12" r="9"/></svg>
+            <span>Vehicle entry</span>
+          </a>
+          <a class="nav-link" href="#exit" data-page="exit" aria-label="Vehicle exit" title="Vehicle exit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg>
+            <span>Vehicle exit</span>
+          </a>
+          <a class="nav-link" href="#records" data-page="records" aria-label="Vehicle records" title="Vehicle records">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5h13v16H7zM4 7.5v13h13M10 9h7m-7 4h7m-7 4h4"/></svg>
+            <span>Vehicle records</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="project-card">
+          <div class="project-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 19V5h7.5a4.5 4.5 0 0 1 0 9H9" /></svg>
+          </div>
+          <strong>Built for learning</strong>
+          <p>A simple visual companion to your C++ parking project.</p>
+          <span class="project-tag"><span></span> LOCAL DEMO</span>
+        </div>
+        <div class="sidebar-footer">PARKWISE <span>·</span> STUDENT PROJECT</div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-page">Dashboard</strong></div>
+          <div class="topbar-right">
+            <span class="system-status"><span></span> System active</span>
+            <span class="topbar-divider"></span>
+            <div class="user-badge" aria-hidden="true">PW</div>
+            <div class="user-copy"><strong>Parking admin</strong><span>Demo workspace</span></div>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="page-view active" id="page-dashboard" aria-labelledby="page-title-dashboard">
+            <div class="page-heading">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-dot"></span> OVERVIEW</div>
+                <h1 id="page-title-dashboard">Good morning <span class="wave">✦</span></h1>
+                <p class="page-subtitle">Here’s what’s happening in your parking lot today.</p>
+              </div>
+              <div class="date-chip">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7.5 3.5v3M16.5 3.5v3M3.5 9.5h17"/></svg>
+                <span id="current-date"></span>
+              </div>
+            </div>
+
+            <div class="stats-grid" aria-label="Parking summary">
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon total-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V5h7.5a4.5 4.5 0 0 1 0 9H9"/><path d="M9 10h3.5a.5.5 0 0 0 0-1H9"/></svg></span><span class="stat-label">TOTAL SLOTS</span></div>
+                <div class="stat-value" id="total-slots">12</div>
+                <div class="stat-foot"><span class="stat-note">Parking capacity</span><span class="stat-trend">● <span>Fixed</span></span></div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon occupied-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10M8 9l1-3h6l1 3"/><circle cx="8" cy="14.5" r=".7"/><circle cx="16" cy="14.5" r=".7"/></svg></span><span class="stat-label">OCCUPIED</span></div>
+                <div class="stat-value" id="occupied-slots">8</div>
+                <div class="stat-foot"><span class="stat-note">Currently parked</span><span class="stat-trend trend-warm">↗ <span>In use</span></span></div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-top"><span class="stat-icon available-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10M8 9l1-3h6l1 3"/><path d="m9 12 2 2 4-4"/></svg></span><span class="stat-label">AVAILABLE</span></div>
+                <div class="stat-value" id="available-slots">4</div>
+                <div class="stat-foot"><span class="stat-note">Ready for vehicles</span><span class="stat-trend trend-green">● <span>Open</span></span></div>
+              </article>
+              <article class="stat-card occupancy-card">
+                <div class="stat-top"><span class="stat-icon occupancy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5v8l5.5 3"/><circle cx="12" cy="12" r="8.5"/></svg></span><span class="stat-label">OCCUPANCY</span></div>
+                <div class="stat-value"><span id="occupancy-rate">67</span><small>%</small></div>
+                <div class="stat-foot"><span class="stat-note">Lot utilization</span><span class="mini-progress"><span id="occupancy-progress"></span></span></div>
+              </article>
+            </div>
+
+            <div class="dashboard-grid">
+              <section class="panel lot-panel">
+                <div class="panel-heading">
+                  <div><div class="panel-title-row"><h2>Parking lot</h2><span class="live-pill"><span></span> LIVE</span></div><p>Tap a slot to view its details.</p></div>
+                  <button class="text-button" type="button" data-go="slots">View all slots <span>→</span></button>
+                </div>
+                <div class="lot-legend">
+                  <span><i class="legend-dot dot-available"></i> Available <b id="legend-available">4</b></span>
+                  <span><i class="legend-dot dot-occupied"></i> Occupied <b id="legend-occupied">8</b></span>
+                </div>
+                <div class="slot-grid compact-grid" id="dashboard-slot-grid" aria-label="Parking slots"></div>
+                <div class="aisle-label"><span></span> DRIVE AISLE <span></span></div>
+                <div class="slot-detail" id="dashboard-slot-detail" aria-live="polite">
+                  <span class="detail-placeholder-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14 6.5 9h11l1.5 5v5h-2v-2H7v2H5zM7 14h10M8 9l1-3h6l1 3"/></svg></span>
+                  <span class="detail-placeholder">Select a parking slot to see its details</span>
+                </div>
+              </section>
+
+              <aside class="right-column">
+                <section class="panel occupancy-panel">
+                  <div class="panel-heading">
+                    <div><h2>Lot occupancy</h2><p>Current capacity usage</p></div>
+                    <span class="icon-button" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></span>
+                  </div>
+                  <div class="occupancy-content">
+                    <div class="donut" id="occupancy-donut" role="img" aria-label="67 percent of parking slots occupied"><div><strong id="donut-rate">67%</strong><span>occupied</span></div></div>
+                    <div class="donut-legend"><span><i class="legend-dot dot-occupied"></i>Occupied <b id="donut-occupied">8</b></span><span><i class="legend-dot dot-available"></i>Available <b id="donut-available">4</b></span></div>
+                  </div>
+                  <div class="capacity-note"><span class="capacity-note-icon">i</span><span id="capacity-note">4 parking spaces are ready for use.</span></div>
+                </section>
+
+                <section class="panel quick-actions-panel">
+                  <div class="panel-heading"><div><h2>Quick actions</h2><p>Common parking tasks</p></div></div>
+                  <button class="quick-action" type="button" data-go="entry"><span class="quick-icon quick-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg></span><span><strong>Park a vehicle</strong><small>Assign the next open slot</small></span><span class="quick-arrow">→</span></button>
+                  <button class="quick-action" type="button" data-go="exit"><span class="quick-icon quick-orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span><span><strong>Release a slot</strong><small>Check out a parked vehicle</small></span><span class="quick-arrow">→</span></button>
+                </section>
+              </aside>
+            </div>
+
+            <section class="panel records-panel">
+              <div class="panel-heading records-heading">
+                <div><h2>Recently parked</h2><p>Vehicles currently in the lot</p></div>
+                <button class="text-button" type="button" data-go="records">All records <span>→</span></button>
+              </div>
+              <div class="table-wrap"><table><thead><tr><th>VEHICLE</th><th>REGISTRATION NUMBER</th><th>PARKING SLOT</th><th>STATUS</th></tr></thead><tbody id="recent-records"></tbody></table></div>
+            </section>
+            <footer class="page-footer"><span>Parkwise <i>·</i> A C++ OOP project demonstration</span><span>Local sample data <i class="footer-dot"></i></span></footer>
+          </section>
+
+          <section class="page-view" id="page-slots" aria-labelledby="page-title-slots">
+            <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> PARKING AREA</div><h1 id="page-title-slots">Parking slots</h1><p class="page-subtitle">Select a slot to see its current status and vehicle.</p></div></div>
+            <div class="stats-grid small-stats">
+              <article class="stat-card"><div class="stat-top"><span class="stat-icon total-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V5h7.5a4.5 4.5 0 0 1 0 9H9"/></svg></span><span class="stat-label">TOTAL SLOTS</span></div><div class="stat-value" id="slots-total">12</div></article>
+              <article class="stat-card"><div class="stat-top"><span class="stat-icon occupied-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10"/></svg></span><span class="stat-label">OCCUPIED</span></div><div class="stat-value" id="slots-occupied">8</div></article>
+              <article class="stat-card"><div class="stat-top"><span class="stat-icon available-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10"/></svg></span><span class="stat-label">AVAILABLE</span></div><div class="stat-value" id="slots-available">4</div></article>
+            </div>
+            <section class="panel full-slots-panel"><div class="panel-heading"><div><div class="panel-title-row"><h2>Lot layout</h2><span class="live-pill"><span></span> LIVE</span></div><p>12 marked spaces · select any space for vehicle details</p></div><div class="lot-legend"><span><i class="legend-dot dot-available"></i> Available</span><span><i class="legend-dot dot-occupied"></i> Occupied</span></div></div><div class="slot-grid full-grid" id="full-slot-grid"></div><div class="aisle-label"><span></span> DRIVE AISLE <span></span></div><div class="slot-detail" id="full-slot-detail" aria-live="polite"><span class="detail-placeholder-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14 6.5 9h11l1.5 5v5h-2v-2H7v2H5zM7 14h10"/></svg></span><span class="detail-placeholder">Select a parking slot to see its details</span></div><div class="parking-full-banner" id="parking-full-banner" hidden><span class="full-banner-icon">!</span><span><strong>Parking full</strong><small>All parking slots are currently occupied. Release a slot before parking another vehicle.</small></span><button class="text-button" type="button" data-go="exit">Find a vehicle to release →</button></div></section>
+            <footer class="page-footer"><span>Parkwise <i>·</i> A C++ OOP project demonstration</span><span>Local sample data <i class="footer-dot"></i></span></footer>
+          </section>
+
+          <section class="page-view" id="page-entry" aria-labelledby="page-title-entry">
+            <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> VEHICLE MANAGEMENT</div><h1 id="page-title-entry">Vehicle entry</h1><p class="page-subtitle">Register an arriving vehicle and assign its parking slot.</p></div></div>
+            <div class="form-layout">
+              <section class="panel form-panel">
+                <div class="form-icon entry-form-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg></div>
+                <h2>Park a vehicle</h2><p class="form-intro">Enter the vehicle registration number to get started.</p>
+                <form id="entry-form" novalidate>
+                  <label class="field-label" for="registration-input">Vehicle registration number</label>
+                  <div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10M8 9l1-3h6l1 3"/></svg><input id="registration-input" name="registration" autocomplete="off" maxlength="16" placeholder="e.g. JH 09 AB 1234" aria-describedby="registration-help entry-message" /></div>
+                  <span class="field-help" id="registration-help">Use a valid number plate, for example JH 09 AB 1234.</span>
+                  <div class="form-message" id="entry-message" role="status" aria-live="polite" hidden></div>
+                  <button class="primary-button form-submit" id="park-button" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg> Park vehicle</button>
+                </form>
+                <div class="form-footnote"><span class="lock-symbol">✓</span> The first available slot is assigned automatically.</div>
+              </section>
+              <aside class="panel availability-panel">
+                <div class="availability-heading"><span class="availability-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4zM8 5.5v13m8-13v13M4 10h16m-16 4h16"/></svg></span><span><strong>Current availability</strong><small>Parking lot status</small></span></div>
+                <div class="availability-big"><strong id="entry-available">4</strong><span>of <b id="entry-total">12</b> slots available</span></div>
+                <div class="availability-bar"><span id="entry-availability-bar"></span></div>
+                <div class="availability-foot"><span>Occupied <b id="entry-occupied">8</b></span><span>Free <b id="entry-free">4</b></span></div>
+                <div class="availability-divider"></div>
+                <div class="next-slot"><span class="next-slot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 14 1.5-5h11l1.5 5v5h-2v-2H7v2H5zM7 14h10"/></svg></span><span><small>NEXT AVAILABLE SLOT</small><strong id="next-slot-label">Slot 03</strong></span><span class="next-status">READY</span></div>
+              </aside>
+            </div>
+            <footer class="page-footer"><span>Parkwise <i>·</i> A C++ OOP project demonstration</span><span>Local sample data <i class="footer-dot"></i></span></footer>
+          </section>
+
+          <section class="page-view" id="page-exit" aria-labelledby="page-title-exit">
+            <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> VEHICLE MANAGEMENT</div><h1 id="page-title-exit">Vehicle exit</h1><p class="page-subtitle">Find a parked vehicle and release its assigned slot.</p></div></div>
+            <div class="form-layout exit-layout">
+              <section class="panel form-panel">
+                <div class="form-icon exit-form-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div>
+                <h2>Find a vehicle</h2><p class="form-intro">Search by vehicle registration number to check out.</p>
+                <form id="exit-form" novalidate>
+                  <label class="field-label" for="exit-registration-input">Vehicle registration number</label>
+                  <div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg><input id="exit-registration-input" name="registration" autocomplete="off" placeholder="e.g. JH 09 AB 1234" aria-describedby="exit-message" /></div>
+                  <div class="form-message" id="exit-message" role="status" aria-live="polite" hidden></div>
+                  <button class="primary-button form-submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg> Find vehicle</button>
+                </form>
+              </section>
+              <section class="panel vehicle-result-panel" id="exit-result-panel">
+                <div class="result-empty" id="exit-empty-state"><span class="result-empty-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg></span><strong>Vehicle details will appear here</strong><span>Search for a registration number to see its assigned slot.</span></div>
+                <div class="result-content" id="exit-result" hidden></div>
+              </section>
+            </div>
+            <footer class="page-footer"><span>Parkwise <i>·</i> A C++ OOP project demonstration</span><span>Local sample data <i class="footer-dot"></i></span></footer>
+          </section>
+
+          <section class="page-view" id="page-records" aria-labelledby="page-title-records">
+            <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> VEHICLE MANAGEMENT</div><h1 id="page-title-records">Vehicle records</h1><p class="page-subtitle">View and filter vehicles currently parked in the lot.</p></div><span class="record-count" id="record-count">8 vehicles parked</span></div>
+            <section class="panel all-records-panel">
+              <div class="records-toolbar"><div><h2>Parked vehicles</h2><p>Active parking sessions</p></div><label class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg><input id="records-search" type="search" placeholder="Search registration or slot" aria-label="Search vehicle records" /></label></div>
+              <div class="table-wrap records-table-wrap"><table><thead><tr><th>VEHICLE</th><th>REGISTRATION NUMBER</th><th>PARKING SLOT</th><th>STATUS</th><th></th></tr></thead><tbody id="all-records"></tbody></table></div>
+              <div class="table-empty" id="records-empty" hidden><span class="empty-search-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg></span><strong>No vehicles found</strong><span>Try another registration number or slot.</span></div>
+            </section>
+            <footer class="page-footer"><span>Parkwise <i>·</i> A C++ OOP project demonstration</span><span>Local sample data <i class="footer-dot"></i></span></footer>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-check">✓</span><span id="toast-message"></span></div>
+  </body>
+</html>
